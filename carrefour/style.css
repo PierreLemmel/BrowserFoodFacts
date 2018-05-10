@@ -1,0 +1,20 @@
+.nutrition-grade-container {
+	position: absolute;
+	z-index: 10000000;
+	width: 80%;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: help;
+}
+
+.nutrition-grade-image {
+	width: 100%;
+	height: auto;
+	opacity: 0.6;
+	transition: 0.7s ease;
+}
+
+.nutrition-grade-image:hover {
+	opacity: 1;
+}

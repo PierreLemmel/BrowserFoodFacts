@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+
+	"name": "Online food facts",
+	"description": "Plugin permettant de voir quels produits sont bons d'un point de vue nutrionnel sur les différents sites de courses en ligne.",
+	"version": "1.0",
+
+	"content_scripts": [
+		{
+			"matches": ["*://www.coursesu.com/*"],
+			"css": ["superu/style.css"],
+			"js": ["shared/jquery.js", "superu/injection.js", "shared/openfoodfacts-api.js"]
+		},
+		{
+			"matches": ["*://ooshop.carrefour.fr/*"],
+			"css": ["carrefour/style.css"],
+			"js": ["shared/jquery.js", "carrefour/injection.js", "shared/openfoodfacts-api.js"]
+		}
+	],
+
+	"web_accessible_resources": [
+		"shared/img/*"
+	]
+}
